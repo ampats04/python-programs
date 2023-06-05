@@ -21,7 +21,8 @@ def main():
     print("Another Way")
     print()
     for i in list:
-        print(i)
+        if i[0] is "M":
+            print(i)
 
 
 if __name__ == "__main__":

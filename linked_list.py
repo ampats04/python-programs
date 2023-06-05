@@ -64,9 +64,19 @@ class LinkedList:
 
             current.next = None
 
-    def deleteAnyWhere(self,data):
+    def deleteAnyWhere(self, data):
+        if self.head is None:
+            return None
 
-        
+        else:
+            current = self.head
+
+            while current.next is not None:
+                current = current.next
+
+                if current.data == data:
+                    print("mao ni ang data", current.data)
+
     def display(self):
         current = self.head
 
@@ -87,8 +97,8 @@ def main():
     linkedlist.append(40)
     linkedlist.addFirst(100)
     linkedlist.deleteFirst()
-    linkedlist.deleteLast()
-    linkedlist.deleteLast()
+
+    linkedlist.deleteAnyWhere(30)
 
     linkedlist.display()
 
