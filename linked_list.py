@@ -69,13 +69,18 @@ class LinkedList:
             return None
 
         else:
-            current = self.head
+            head = self.head
+            tail = self.head
 
-            while current.next is not None:
-                current = current.next
+            while tail.next is not None:
+                head = tail
+                tail = tail.next
 
-                if current.data == data:
-                    print("mao ni ang data", current.data)
+            if tail.data == data:
+                print("tail", tail.data)
+                print("head", head.data)
+                tail = head
+                head = head.next
 
     def display(self):
         current = self.head
@@ -98,10 +103,9 @@ def main():
     linkedlist.addFirst(100)
     linkedlist.deleteFirst()
 
-    linkedlist.deleteAnyWhere(30)
+    linkedlist.deleteAnyWhere(40)
 
     linkedlist.display()
-
 
 if __name__ == "__main__":
     main()

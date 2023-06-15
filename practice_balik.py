@@ -1,5 +1,5 @@
 from datetime import datetime
-from random import random, randrange
+from random import random, randrange, uniform
 
 
 class practice:
@@ -46,7 +46,7 @@ class practice:
         # Random Numbers (3 types)
         rndom = random()
         rndom_range = randrange(1, 100)
-        rndom_float = random.uniform(1, 100)
+        rndom_float = uniform(1, 100)
 
         # if-else condition in python
         if "nihga" in strins:
