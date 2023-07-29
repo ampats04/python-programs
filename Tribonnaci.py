@@ -1,5 +1,5 @@
 class Tribonnaci:
-    def tribonnaci(signature, n):
+    def tribonnaci(self, signature, n):
         if n == 0:
             return []
         elif n <= 3:
@@ -8,14 +8,14 @@ class Tribonnaci:
         result = signature[:]
 
         for i in range(3, n):
-            next_number = sum(result[-3])
+            next_number = sum(result[3:])
             result.append(next_number)
 
 
 def main():
-    tr = Tribonnaci
+    tr = Tribonnaci()
 
-    tr.tribonnaci([1, 1, 1], 10)
+    print(tr.tribonnaci([1, 1, 1], 10))
 
 
 if __name__ == "__main__":
